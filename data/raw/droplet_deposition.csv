@@ -1,10 +1,10 @@
-plant.name, plant.phenotypes.height, model.name, model.dimensions.length, model.dimensions.width, model.dimensions.height, model.tank_volume, model.rotors.number, model.nozzles.type, model.nozzles.number, model.positioning_mode, model.swath_width.min, model.swath_width.max, model.water_pump.type, experiment.name, experiment.weather.temperature, experiment.weather.humidity, experiment.weather.velocity, experiment.params.height, experiment.params.flight_speed, experiment.params.spray_volume, experiment.params.flow_rate, experiment.results.coverage.value, experiment.results.coverage.CV, experiment.results.droplet_size.value,  experiment.results.droplet_size.CV
-wheat, 0.05, AGRAS T20, 1.1, 0.57, 0.732, 20, 6, XR110015, 8, GNSS RTK, 5, 5, diaphragm pump, T1, 13.9, 32.9, 2.1, 2.5, 3.5, 15.0, 1.575, 4.5, 45.3, 323, 10.1
-wheat, 0.05, AGRAS T20, 1.1, 0.57, 0.732, 20, 6, XR110015, 8, GNSS RTK, 5, 5, diaphragm pump, T2, 13.6, 31.0, 3.0, 2.5, 4.5, 15.0, 2.025, 5.5, 47.3, 307, 11.3
-wheat, 0.05, AGRAS T20, 1.1, 0.57, 0.732, 20, 6, XR110015, 8, GNSS RTK, 5, 5, diaphragm pump, T3, 14.1, 46.7, 3.4, 2.5, 5.5, 15.0, 2.475, 3.2, 28.8, 360, 9.1
-wheat, 0.05, AGRAS T20, 1.1, 0.57, 0.732, 20, 6, XR110015, 8, GNSS RTK, 5, 5, diaphragm pump, T4, 13.9, 32.9, 5.2, 2.5, 4.5, 11.7, 1.575, 2.3, 51.2,,
-wheat, 0.05, AGRAS T20, 1.1, 0.57, 0.732, 20, 6, XR110015, 8, GNSS RTK, 5, 5, diaphragm pump, T5, 13.6, 31.0, 3.0, 2.5, 4.5, 15.0, 2.025, 5.5, 49.7,,
-wheat, 0.05, AGRAS T20, 1.1, 0.57, 0.732, 20, 6, XR110015, 8, GNSS RTK, 5, 5, diaphragm pump, T6, 13.6, 31.0, 2.8, 2.5, 4.5, 18.3, 2.475, 4.8, 28.5,,
-wheat, 0.05, AGRAS T20, 1.1, 0.57, 0.732, 20, 6, XR110015, 8, GNSS RTK, 5, 5, diaphragm pump, T7, 17.4, 40.5, 2.7, 2.5, 3.5, 19.4, 2.025, 6.5, 54.3,,
-wheat, 0.05, AGRAS T20, 1.1, 0.57, 0.732, 20, 6, XR110015, 8, GNSS RTK, 5, 5, diaphragm pump, T8, 13.6, 31.0, 3.0, 2.5, 4.5, 15.0, 2.025, 5.5, 49.5,,
-wheat, 0.05, AGRAS T20, 1.1, 0.57, 0.732, 20, 6, XR110015, 8, GNSS RTK, 5, 5, diaphragm pump, T9, 12.9, 32.0, 2.9, 2.5, 5.5, 12.3, 2.025, 2.1, 49.4,,
+plant.name,plant.phenotypes.height,model.name,model.dimensions.length,model.dimensions.width,model.dimensions.height,model.tank_volume,model.rotors.number,model.nozzles.type,model.nozzles.number,model.positioning_mode,model.swath_width.min,model.swath_width.max,model.water_pump.type,experiment.name,experiment.weather.temperature,experiment.weather.humidity,experiment.weather.velocity,experiment.params.height,experiment.params.flight_speed,experiment.params.spray_volume,experiment.params.flow_rate,experiment.results.coverage.value,experiment.results.coverage.CV,experiment.results.droplet_size.value,experiment.results.droplet_size.CV
+wheat,0.05,AGRAS T20,1.1,0.57,0.732,20,6,XR110015,8,GNSS RTK,5,5,diaphragm pump,T1,13.9,32.9,2.1,2.5,3.5,15.0,1.575,4.5,45.3,323,10.1
+wheat,0.05,AGRAS T20,1.1,0.57,0.732,20,6,XR110015,8,GNSS RTK,5,5,diaphragm pump,T2,13.6,31.0,3.0,2.5,4.5,15.0,2.025,5.5,47.3,307,11.3
+wheat,0.05,AGRAS T20,1.1,0.57,0.732,20,6,XR110015,8,GNSS RTK,5,5,diaphragm pump,T3,14.1,46.7,3.4,2.5,5.5,15.0,2.475,3.2,28.8,360,9.1
+wheat,0.05,AGRAS T20,1.1,0.57,0.732,20,6,XR110015,8,GNSS RTK,5,5,diaphragm pump,T4,13.9,32.9,5.2,2.5,4.5,11.7,1.575,2.3,51.2,,
+wheat,0.05,AGRAS T20,1.1,0.57,0.732,20,6,XR110015,8,GNSS RTK,5,5,diaphragm pump,T5,13.6,31.0,3.0,2.5,4.5,15.0,2.025,5.5,49.7,,
+wheat,0.05,AGRAS T20,1.1,0.57,0.732,20,6,XR110015,8,GNSS RTK,5,5,diaphragm pump,T6,13.6,31.0,2.8,2.5,4.5,18.3,2.475,4.8,28.5,,
+wheat,0.05,AGRAS T20,1.1,0.57,0.732,20,6,XR110015,8,GNSS RTK,5,5,diaphragm pump,T7,17.4,40.5,2.7,2.5,3.5,19.4,2.025,6.5,54.3,,
+wheat,0.05,AGRAS T20,1.1,0.57,0.732,20,6,XR110015,8,GNSS RTK,5,5,diaphragm pump,T8,13.6,31.0,3.0,2.5,4.5,15.0,2.025,5.5,49.5,,
+wheat,0.05,AGRAS T20,1.1,0.57,0.732,20,6,XR110015,8,GNSS RTK,5,5,diaphragm pump,T9,12.9,32.0,2.9,2.5,5.5,12.3,2.025,2.1,49.4,,
