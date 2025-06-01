@@ -216,22 +216,22 @@
     </tr>
     <tr>
         <td></td><td></td>
-        <td colspan="2">.WH</td>
+        <td colspan="2">.height</td>
         <td>Рабочая высота (м)</td>
     </tr>
     <tr>
         <td></td><td></td>
-        <td colspan="2">.DS</td>
+        <td colspan="2">.flight_speed</td>
         <td>Скорость полёта (м/с)</td>
     </tr>
     <tr>
         <td></td><td></td>
-        <td colspan="2">.SV</td>
+        <td colspan="2">.spray_volume</td>
         <td>Объём опрыскивания (л/га)</td>
     </tr>
     <tr>
         <td></td><td></td>
-        <td colspan="2">.AD</td>
+        <td colspan="2">.atomization_diameter</td>
         <td>Диаметр автоматики</td>
     </tr>
     <tr>
@@ -494,6 +494,246 @@
         <td></td><td></td><td></td>
         <td>.value</td>
         <td>Среднее значение (мкм)</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.CV</td>
+        <td>Коэффициент вариации (%)</td>
+    </tr>
+    <tr>
+        <td colspan="5"></td>
+    </tr>
+</table>
+
+## [coffee_science.csv](./coffee_science.csv)
+- Статья: [Effect of flight operative height and genotypes on conilon coffee spraying using an unmanned aerial vehicle](https://coffeescience.ufla.br/index.php/Coffeescience/article/view/2003)
+- Эксперимент: Effect of the operational height of application and the conilon coffee genotype
+- Описание данных:
+<table>
+    <tr>
+        <td colspan="4">Название столбца</td>
+        <td>Описание</td>
+    </tr>
+    <tr>
+        <td colspan="5"></td>
+    </tr>
+    <tr>
+        <td colspan="4">plant</td>
+        <td><b>Характеристики плантации</b></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.name</td>
+        <td>Название</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.cultivar</td>
+        <td>Сорт</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.genotype</td>
+        <td>Генотип</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.phenotypes</td>
+        <td><b><i>Фенотипы (в среднем)</i></b></td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.plagiotropic_node_number</td>
+        <td>количество узлов на плагиотропных ветвях (шт)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.plagiotropic_node_distance</td>
+        <td>расстояние между узлами плагиотропных ветвей (см)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.orthotropic_branch_length</td>
+        <td>длина ортотропных ветвей (см)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.orthotropic_branch_node_number</td>
+        <td>количество узлов на ортотропных ветвях (шт)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.height</td>
+        <td>Высота (м)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.diameter</td>
+        <td>диаметр полога (см)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.leaf_area</td>
+        <td>площадь листьев (см²)</td>
+    </tr>
+    <tr>
+        <td colspan="5"></td>
+    </tr>
+    <tr>
+        <td colspan="4">model</td>
+        <td><b>Характеристики БПЛА</b></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.name</td>
+        <td>Название</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.tank_volume</td>
+        <td>Объём бака (л)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.rotors</td>
+        <td><b><i>Характеристики пропеллеров</i></b></td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.number</td>
+        <td>Количество (шт)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.nozzles</td>
+        <td><b><i>Характеристики форсунок</i></b></td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.type</td>
+        <td>Название модели</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.number</td>
+        <td>Количество (шт)</td>
+    </tr>
+    <tr>
+        <td colspan="5"></td>
+    </tr>
+    <tr>
+        <td colspan="4">experiment</td>
+        <td><b>Параметры эксперимента</b></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.name</td>
+        <td>Кодовое название</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.weather</td>
+        <td><b><i>Погодные условия</i></b></td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.temperature</td>
+        <td><i>Диапазон температур</i></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.min</td>
+        <td>Нижняя граница (°C)</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.max</td>
+        <td>Верхняя граница (°C)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.humidity</td>
+        <td><i>Диапазон влажности воздуха</i></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.min</td>
+        <td>Нижняя граница (%)</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.max</td>
+        <td>Верхняя граница (%)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.velocity</td>
+        <td><i>Диапазон скорости ветра</i></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.min</td>
+        <td>Нижняя граница (м/с)</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.max</td>
+        <td>Верхняя граница (м/с)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.params</td>
+        <td><b><i>Настраиваемые параметры БПЛА</i></b></td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.height</td>
+        <td>Рабочая высота (м)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.flight_speed</td>
+        <td>Скорость полёта (м/с)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.spray_volume</td>
+        <td>Объём опрыскивания (л/га)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3">.results</td>
+        <td><b><i>Результаты</i></b></td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.coverage</td>
+        <td><i>Покрытие</i></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.value</td>
+        <td>Среднее значение (%)</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.CV</td>
+        <td>Коэффициент вариации (%)</td>
+    </tr>
+    <tr>
+        <td></td><td></td>
+        <td colspan="2">.droplet_size</td>
+        <td><i>Размер капель</i></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.value</td>
+        <td>Среднее значение (мкм)</td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+        <td>.max</td>
+        <td>Максимальное значение (мкм)</td>
     </tr>
     <tr>
         <td></td><td></td><td></td>
