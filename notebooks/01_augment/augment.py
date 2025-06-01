@@ -98,12 +98,11 @@ def plot_metric_bw_style(
     model_name: str,
     metric: str,
     experiment_order: list = None,
-    y_value_range: tuple = None,
-    y_cv_range: tuple = None
+    y_value_range: tuple = None
 ) -> None:
     """
-    Строит столбчатые графики средних значений метрики и
-    линию CV для оригинальных данных и аугментаций x5, x10.
+    Строит столбчатые графики средних значений метрики
+    для оригинальных данных и аугментаций x5, x10.
 
     :param df_orig: DataFrame оригинальных данных
     :param df_aug5: DataFrame с 5-кратной аугментацией
@@ -112,14 +111,12 @@ def plot_metric_bw_style(
     :param metric: имя метрики (например, 'coverage' или 'droplet_size')
     :param experiment_order: список имен экспериментов для упорядочивания
     :param y_value_range: кортеж (min, max) для оси значений
-    :param y_cv_range: кортеж (min, max) для оси CV
     """
     value_col = f"experiment.results.{metric}.value"
-    cv_col = f"experiment.results.{metric}.CV"
 
-    def avg(df):
+    def avg(df: pd.DataFrame) -> pd.DataFrame:
         sub = df[df['model.name'] == model_name]
-        return sub.groupby('experiment.name')[[value_col, cv_col]].mean().reset_index()
+        return sub.groupby('experiment.name')[[value_col]].mean().reset_index()
 
     df_o = avg(df_orig)
     df_5 = avg(df_aug5)
@@ -129,7 +126,7 @@ def plot_metric_bw_style(
     if experiment_order:
         common = [e for e in experiment_order if e in common]
 
-    def prepare(df):
+    def prepare(df: pd.DataFrame) -> pd.DataFrame:
         df = df[df['experiment.name'].isin(common)].copy()
         df['experiment.name'] = pd.Categorical(df['experiment.name'], categories=common, ordered=True)
         return df.sort_values('experiment.name')
@@ -138,7 +135,6 @@ def plot_metric_bw_style(
     x = range(len(common))
 
     fig, ax1 = plt.subplots(figsize=(14, 7))
-    ax2 = ax1.twinx()
 
     width = 0.25
     ax1.bar([i - width for i in x], df_o[value_col], width,
@@ -148,20 +144,13 @@ def plot_metric_bw_style(
     ax1.bar([i + width for i in x], df_10[value_col], width, 
             color='grey', edgecolor='black', hatch='xxx', label=f"{metric} value (aug x10)")
 
-    ax2.plot(x, df_10[cv_col], marker='d', linestyle=':', color='gray', label='CV augmented x10 (avg)')
-    ax2.plot(x, df_5[cv_col], marker='s', linestyle='--', color='dimgray', label='CV augmented x5 (avg)')
-    ax2.plot(x, df_o[cv_col], marker='o', linestyle='-', color='black', label='CV original')
-
     if y_value_range: ax1.set_ylim(y_value_range)
-    if y_cv_range: ax2.set_ylim(y_cv_range)
 
     ax1.set_xticks(x)
     ax1.set_xticklabels(common, rotation=45, ha='right')
     ax1.grid(axis='y', linestyle='--', alpha=0.7)
 
     ax1.legend(loc='upper left', frameon=False)
-    ax2.legend(loc='upper right', frameon=False)
 
     plt.title(f"{model_name} — {metric}")
-    plt.tight_layout()
     plt.show()
