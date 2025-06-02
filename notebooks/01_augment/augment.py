@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+plt.rcParams.update({'font.size': 24})
 
 ## 1. Генерация случайного отклонения
 def vary(value: float, min_pct: float = 0.02, max_pct: float = 0.05) -> float:
@@ -98,7 +99,8 @@ def plot_metric_bw_style(
     model_name: str,
     metric: str,
     experiment_order: list = None,
-    y_value_range: tuple = None
+    y_value_range: tuple = None,
+    y_label: str = None
 ) -> None:
     """
     Строит столбчатые графики средних значений метрики
@@ -149,6 +151,7 @@ def plot_metric_bw_style(
     ax1.set_xticks(x)
     ax1.set_xticklabels(common, rotation=45, ha='right')
     ax1.grid(axis='y', linestyle='--', alpha=0.7)
+    ax1.set_ylabel(y_label or f"{metric} value")
 
     ax1.legend(loc='upper left', frameon=False)
 

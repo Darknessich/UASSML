@@ -7,6 +7,7 @@ from pandas import DataFrame, Series
 
 Numeric = Union[np.ndarray, Series]
 
+
 def compute_metrics(
     y_true: Numeric,
     y_pred: Numeric
@@ -50,7 +51,7 @@ def plot_actual_vs_predicted(
     hi = max(y_train.max(), y_test.max())
     plt.plot([lo, hi], [lo, hi], 'k--', lw=1.2)
 
-    plt.title(f"{model_name}\nФактические и Предсказанные")
+    plt.title(f"{model_name}")
     plt.xlabel("Фактические значения")
     plt.ylabel("Предсказанные значения")
     plt.legend()
@@ -66,6 +67,8 @@ def evaluate_holdout(
     y_test: Numeric,
     model: Any,
     model_name: str,
+    scale: float = 1.0,
+    mean: float = 0.0,
     **kwargs: Dict[str, Any]
 ) -> Dict[str, float]:
     """
@@ -82,6 +85,11 @@ def evaluate_holdout(
     # 2. Предсказания
     y_pred_train = trained_model.predict(X_train)
     y_pred_test  = trained_model.predict(X_test)
+
+    y_train = y_train * scale + mean
+    y_test  = y_test * scale + mean
+    y_pred_train = y_pred_train * scale + mean
+    y_pred_test  = y_pred_test * scale + mean
 
     # 3. Метрики
     metrics_train = compute_metrics(y_train, y_pred_train)
